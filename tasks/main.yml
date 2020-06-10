@@ -1,0 +1,4 @@
+---
+- import_tasks: elk_server.yml
+  tags:
+    - elk_server
