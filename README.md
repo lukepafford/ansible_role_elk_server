@@ -10,9 +10,9 @@ Installs version 7.X of the Elastic stack
 
 Role Variables
 ==============
-elk_server_cluster_name
-elk_server_elasticsearch_port
-elk_server_kibana_port
+* elk_server_cluster_name
+* elk_server_elasticsearch_port
+* elk_server_kibana_port
 
 Example Playbook
 ----------------
