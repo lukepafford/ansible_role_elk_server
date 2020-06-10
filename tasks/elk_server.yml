@@ -16,7 +16,8 @@
 
 - name: Install the elk stack
   dnf:
-    - elasticsearch
-    - kibana
-    - logstash
-  state: present
+    name: 
+      - elasticsearch
+      - kibana
+      - logstash
+    state: present
