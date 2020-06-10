@@ -50,7 +50,7 @@
     path: /var/log/kibana
     state: directory
     owner: kibana
-    group: directory
+    group: kibana
     mode: 0755
 
 
