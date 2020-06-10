@@ -1,3 +1,9 @@
+- name: Install elastic rpm keys
+  rpm_key:
+    state: present
+    key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+
 - name: Install the Elasticsearch yum repository (Logstash included)
   yum_repository:
     name: elasitcsearch-7.X
@@ -20,6 +26,7 @@
       - elasticsearch
       - kibana
       - logstash
+      - java-11-openjdk
     state: present
 
 
