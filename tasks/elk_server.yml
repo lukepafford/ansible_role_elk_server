@@ -43,6 +43,16 @@
   notify: Restart kibana
 
 
+- name: Configure logstash
+  template:
+    src: logstash.yml
+    dest: /etc/logstash/logstash.yml
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart logstash
+
+
 - name: Configure the firewall
   firewalld:
     port: '{{ item }}/tcp'

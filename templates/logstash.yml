@@ -16,7 +16,7 @@
 #
 # Use a descriptive name for the node:
 #
-# node.name: test
+node.name: {{ ansible_fqdn }}
 #
 # If omitted the node name will default to the machine's host name
 #
@@ -25,7 +25,7 @@
 # Which directory should be used by logstash and its plugins
 # for any persistent needs. Defaults to LOGSTASH_HOME/data
 #
-path.data: /var/lib/logstash
+path.data: {{ elk_server_logstash_data_directory }}
 #
 # ------------ Pipeline Settings --------------
 #
