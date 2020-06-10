@@ -1,0 +1,22 @@
+- name: Install the Elasticsearch yum repository (Logstash included)
+  yum_repository:
+    name: elasitcsearch-7.X
+    base_url: https://artifacts.elastic.co/packages/7.x/yum
+    description: Elasticsearch repository for 7.x packages
+    state: present
+
+
+- name: Install the Kibana yum repository
+  yum_repository:
+    name: kibana-7.X
+    base_url: https://artifacts.elastic.co/packages/7.x/yum
+    description: Kibana repository for 7.x packages
+    state: present
+
+
+- name: Install the elk stack
+  dnf:
+    - elasticsearch
+    - kibana
+    - logstash
+  state: present
