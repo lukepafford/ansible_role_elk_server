@@ -53,6 +53,15 @@
   notify: Restart logstash
 
 
+- name: Configure logstash pipeline
+  template:
+    src: beats.conf
+    dest: /etc/logstash/conf.d/beats.conf
+    owner: root
+    group: logstash
+    mode: 0640
+
+
 - name: Configure the firewall
   firewalld:
     port: '{{ item }}/tcp'

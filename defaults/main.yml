@@ -2,5 +2,5 @@
 elk_server_cluster_name: my_cluster
 elk_server_elasticsearch_port: 9200
 elk_server_kibana_port: 5601
-elk_server_logstash_port:
+elk_server_logstash_port: 5044
 elk_server_logstash_data_directory: /var/lib/logstash

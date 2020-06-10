@@ -31,7 +31,7 @@ path.data: {{ elk_server_logstash_data_directory }}
 #
 # The ID of the pipeline.
 #
-# pipeline.id: main
+pipeline.id: main
 #
 # Set the number of workers that will, in parallel, execute the filters+outputs
 # stage of the pipeline.
