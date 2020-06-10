@@ -21,3 +21,30 @@
       - kibana
       - logstash
     state: present
+
+
+- name: Configure elasticsearch
+  template:
+    src: elasticsearch.yml
+    dest: /etc/elasticsearch/elasticsearch.yml
+    owner: root
+    group: elasticsearch
+    mode: 0660
+
+- name: Configure the firewall
+  firewalld:
+    port: '{{ item }}/tcp'
+    permanent: yes
+    immediate: yes
+    state: enabled
+  loop:
+    - '{{ elk_server_elasticsearch_port }}'
+
+
+- name: Start the services
+  service:
+    name: '{{ item }}'
+    state: started
+    enabled: yes
+  loop:
+    - elasticsearch

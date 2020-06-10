@@ -8,6 +8,11 @@ Installs version 7.X of the Elastic stack
 - Logstash
 
 
+Role Variables
+==============
+elk_server_cluster_name
+elk_server_elasticsearch_port
+
 Example Playbook
 ----------------
 
