@@ -7,6 +7,7 @@ Installs version 7.X of the Elastic stack
 - Kibana
 - Logstash
 
+This role will configure a default pipeline to receive data from beats clients
 
 Role Variables
 ==============
