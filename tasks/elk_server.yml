@@ -45,6 +45,15 @@
   notify: Restart elasticsearch
 
 
+- name: Create log directory for kibana
+  file:
+    path: /var/log/kibana
+    state: directory
+    owner: kibana
+    group: directory
+    mode: 0755
+
+
 - name: Configure kibana
   template:
     src: kibana.yml

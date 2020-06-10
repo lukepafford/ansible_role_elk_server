@@ -94,7 +94,7 @@ elasticsearch.hosts: ["http://{{ ansible_fqdn }}:{{ elk_server_elasticsearch_por
 #pid.file: /var/run/kibana.pid
 
 # Enables you specify a file where Kibana stores log output.
-logging.dest: /var/log/kibana.log
+logging.dest: /var/log/kibana/kibana.log
 
 # Set the value of this setting to true to suppress all logging output.
 #logging.silent: false
