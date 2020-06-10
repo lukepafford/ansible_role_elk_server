@@ -33,6 +33,16 @@
   notify: Restart elasticsearch
 
 
+- name: Configure kibana
+  template:
+    src: kibana.yml
+    dest: /etc/kibana/kibana.yml
+    owner: root
+    group: kibana
+    mode: 0644
+  notify: Restart kibana
+
+
 - name: Configure the firewall
   firewalld:
     port: '{{ item }}/tcp'
@@ -41,12 +51,4 @@
     state: enabled
   loop:
     - '{{ elk_server_elasticsearch_port }}'
-
-
-- name: Start the services
-  service:
-    name: '{{ item }}'
-    state: started
-    enabled: yes
-  loop:
-    - elasticsearch
+    - '{{ elk_server_kibana_port }}'

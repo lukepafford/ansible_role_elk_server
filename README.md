@@ -12,6 +12,7 @@ Role Variables
 ==============
 elk_server_cluster_name
 elk_server_elasticsearch_port
+elk_server_kibana_port
 
 Example Playbook
 ----------------

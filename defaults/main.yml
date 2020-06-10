@@ -1,3 +1,4 @@
 ---
 elk_server_cluster_name: my_cluster
 elk_server_elasticsearch_port: 9200
+elk_server_kibana_port: 5601
