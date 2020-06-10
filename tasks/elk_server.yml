@@ -30,6 +30,8 @@
     owner: root
     group: elasticsearch
     mode: 0660
+  notify: Restart elasticsearch
+
 
 - name: Configure the firewall
   firewalld:
