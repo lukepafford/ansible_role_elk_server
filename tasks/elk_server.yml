@@ -21,13 +21,13 @@
 
 
 - name: Ensure java is installed for the Elastic stack
-  dnf:
+  package:
     name: java-11-openjdk
     state: present
 
 
 - name: Install the elk stack
-  dnf:
+  package:
     name:
       - elasticsearch
       - kibana
